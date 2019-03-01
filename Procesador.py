@@ -1,3 +1,11 @@
+#===================================================
+# Andre Rodriguez
+# Sara Zavala 18893
+# Hoja de Trabajo 5
+# Simulador de procesos, cpu y memoria RAM
+# Fecha de entrega 28 de Febrero de 2019
+#Estructura de Datos
+#===================================================
 import simpy
 import random
 
