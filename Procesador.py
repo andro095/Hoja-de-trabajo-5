@@ -57,14 +57,15 @@ def proceso (nombre, env, create_time, procesador,ram):
 # ----------------------
 
 #Environment de nuestro simulador
-env = simpy.Environment()  # ambiente de simulación
-procesador = simpy.Resource(env, capacity=1)#procesador, modificar capacidad y init
-ram = simpy.Container(env, init=100, capacity=100)#RAM, modificar capacidad y init
-random.seed(10)  # fijar el inicio de random
+env = simpy.Environment() #Ambiente
+procesador = simpy.Resource(env,capacitu=1)#procesador, modificar capacidad y init
+ram = simpy.Container(env, init=100,capacity=100)#RAM, modificar capacidad y init
+random.seed(10)#Inicio del random
 
 totalprocesador = 0
 tiempos = list()
-cantprocesos = 5 #Cantidad de procesos a realizar
+cantprocesos = 5#Cantidad de procesos a realizar
+
 for i in range(cantprocesos):
     env.process(proceso('Proceso %d' % i, env, random.expovariate(1.0 / 10), procesador,ram))
 
